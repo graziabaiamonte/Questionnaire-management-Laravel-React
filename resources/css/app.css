@@ -1,0 +1,191 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: #FEFDFC;
+        --foreground: 240 10% 3.9%;
+        --card: 0 0% 100%;
+        --card-foreground: 240 10% 3.9%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 240 10% 3.9%;
+        --primary: 242 31% 35%;
+        --primary-foreground: 0 0% 98%;
+        --secondary: 240 4.8% 95.9%;
+        --secondary-foreground: 240 5.9% 10%;
+        --muted: 240 4.8% 95.9%;
+        --muted-foreground: 240 3.8% 46.1%;
+        --accent: 240 4.8% 95.9%;
+        --accent-foreground: 240 5.9% 10%;
+        --destructive: 0 84.2% 60.2%;
+        --destructive-foreground: 359 100% 50%;
+        --border: 240 5.9% 90%;
+        --input: 0 0% 79.6%;
+        --ring: 242 31% 35%;
+        --radius: 0rem;
+    }
+
+    .dark {
+        --background: 240 10% 3.9%;
+        --foreground: 0 0% 98%;
+        --card: 240 10% 3.9%;
+        --card-foreground: 0 0% 98%;
+        --popover: 240 10% 3.9%;
+        --popover-foreground: 0 0% 98%;
+        --primary: 0 0% 98%;
+        --primary-foreground: 240 5.9% 10%;
+        --secondary: 240 3.7% 15.9%;
+        --secondary-foreground: 0 0% 98%;
+        --muted: 240 3.7% 15.9%;
+        --muted-foreground: 240 5% 64.9%;
+        --accent: 240 3.7% 15.9%;
+        --accent-foreground: 0 0% 98%;
+        --destructive: 0 62.8% 30.6%;
+        --destructive-foreground: 0 0% 98%;
+        --border: 240 3.7% 15.9%;
+        --input: 240 3.7% 15.9%;
+        --ring: 240 4.9% 83.9%;
+    }
+}
+
+.btn-start {
+    justify-content: start !important;
+}
+*{
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: var(--background);
+}
+
+
+/**
+ * Typography
+ */
+
+/* poppins-regular - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 400;
+    src: url('../fonts/poppins-v21-latin-regular.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+/* poppins-600 - latin */
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    font-weight: 600;
+    font-weight: 700;
+    src: url('../fonts/poppins-v21-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 500;
+    src: url('../fonts/poppins-v21-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 600;
+    src: url('../fonts/poppins-v21-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+@font-face {
+    font-display: swap; /* Check https://developer.mozilla.org/en-US/docs/Web/CSS/@font-face/font-display for other options. */
+    font-family: 'Poppins';
+    font-style: normal;
+    font-weight: 700;
+    src: url('../fonts/poppins-v21-latin-600.woff2') format('woff2'); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
+}
+
+
+ul.list-disc {
+    padding-left: 20px;
+}
+
+ul.list-disc li{
+    margin-bottom: 5px;
+}
+
+.list-disc li::marker {
+    font-size: 0.9em;
+}
+
+/**
+ * Wysiwyg frontend styles
+ */
+
+.html-description p,
+.html-description ol,
+.html-description ul {
+    margin-bottom: 1rem;
+}
+
+.html-description ul,
+.html-description ol {
+    padding-left: 1.5rem;
+}
+
+.html-description ul {
+    list-style-type: disc;
+}
+
+.html-description ol {
+    list-style-type: decimal;
+}
+
+.html-description li {
+    margin-bottom: 0.5rem;
+}
+
+.html-description h1,
+.html-description h2,
+.html-description h3,
+.html-description h4,
+.html-description h5,
+.html-description h6 {
+    font-weight: 600;
+    line-height: 1.2;
+    margin: .25rem 0 1rem;
+    color: #212529;
+}
+.html-description h1 {
+    font-size: 2rem;
+}
+
+.html-description h2 {
+    font-size: 1.75rem;
+}
+
+.html-description h3 {
+    font-size: 1.5rem;
+}
+
+.html-description h4 {
+    font-size: 1.25rem;
+}
+
+.html-description h5 {
+    font-size: 1.1rem;
+}
+
+.html-description h6 {
+    font-size: 1rem;
+}
+
+.html-description a {
+    color: #9BBF07;
+    text-decoration: underline;
+}
+
+/* reCaptcha */
+.grecaptcha-badge {
+    visibility: hidden;
+}
